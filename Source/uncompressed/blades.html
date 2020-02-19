@@ -1,3 +1,4 @@
+
 <div class="preload"><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-red.png"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/xptooth-white.png"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-red.png"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-black.png"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-halfgrey.png"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/stresstooth-white.png"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-red.png"/><img src="https://raw.githubusercontent.com/Roll20/roll20-character-sheets/master/Blades%20in%20the%20Dark/Assets/teeth/shorttooth-grey.png"/>
 </div>
 <input class="focus-shadow" type="hidden" name="attr_setting_focus_shadow" value="1"/>
@@ -14,7 +15,7 @@
 <input type="hidden" name="attr_consequence_query" value="^{a_consequence}"/>
 <input type="hidden" name="attr_stress_max" value="9"/>
 <input type="hidden" name="attr_trauma_max" value="4"/>
-<input type="hidden" name="attr_coin_max" value="4"/>
+<input type="hidden" name="attr_coin_max" value="9"/>
 <input type="hidden" name="attr_stash_max" value="40"/>
 <input type="hidden" name="attr_playbook_xp_max" value="8"/>
 <input type="hidden" name="attr_rep_max" value="12"/>
@@ -1237,7 +1238,13 @@
             <label class="claimbridge claims-horisep">
               <input type="checkbox" name="attr_claim_bridge_7_8" value="1" checked="checked"/><span></span>
             </label>
-          <div class="lairbox flex-center uppercase" data-i18n="lair"></div>
+            <div class="claimbox">
+              <label>
+                <input class="checkbox squarebox-small" type="checkbox" name="attr_claim_7_check" value="1"/><span></span>
+              </label>
+              <textarea class="label" spellcheck="false" name="attr_claim_7_name"></textarea>
+              <textarea class="claim-desc" spellcheck="false" name="attr_claim_7_desc"></textarea>
+            </div>
             <label class="claimbridge claims-horisep">
               <input type="checkbox" name="attr_claim_bridge_8_9" value="1" checked="checked"/><span></span>
             </label>
@@ -1447,9 +1454,6 @@
             <div class="blackheader crewcoin1">
               <div class="label" data-i18n="coin"></div>
             </div>
-            <div class="greyheader crewcoin2">
-              <div class="label" data-i18n="vaults"></div>
-            </div>
           </div>
           <div class="col100 flex crewcoin-coins">
             <input class="zero" type="radio" name="attr_crewcoin" value="0" checked="checked"/><span></span>
@@ -1458,19 +1462,10 @@
             <input class="radiobox" type="radio" name="attr_crewcoin" value="3"/><span></span>
             <input class="radiobox" type="radio" name="attr_crewcoin" value="4"/><span></span>
             <input class="radiobox" type="radio" name="attr_crewcoin" value="5"/><span></span>
-            <div class="crewcoinbar"></div>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="6"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="7"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="8"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="9"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="10"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="11"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="12"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="13"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="14"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="15"/><span></span>
-            <input class="radiobox vaultcoin" type="radio" name="attr_crewcoin" value="16"/><span></span>
-            <div class="crewcoinbar"></div>
+            <input class="radiobox" type="radio" name="attr_crewcoin" value="6"/><span></span>
+            <input class="radiobox" type="radio" name="attr_crewcoin" value="7"/><span></span>
+            <input class="radiobox" type="radio" name="attr_crewcoin" value="8"/><span></span>
+            <input class="radiobox" type="radio" name="attr_crewcoin" value="9"/><span></span>
           </div>
           <div class="col100 crewcoin-desc" data-i18n="upon_crew_advance"></div>
         </div>
@@ -1578,135 +1573,92 @@
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_6_check_1" value="1"/><span></span>
-                  <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_6_check_2" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_6_name" value="Carriage"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_6_name" value="Surgery"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_6_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_6_description" data-i18n-placeholder="description">You have a carriage, two goats to pull it, and a stable. A second upgrade improves the carriage with armor and larger, swifter goats. Horses are very rare in Doskvol — most carriages in the city use the large Akorosian goat as their draft animal.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_6_description" data-i18n-placeholder="description">You get +1d to healing rolls. Cohorts recover an harm additional during downtime.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_7_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_7_name" value="Documents"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_7_name" value="Lists"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_7_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_7_description" data-i18n-placeholder="description">+1 quality for Documents.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_7_description" data-i18n-placeholder="description">Choose one. 1) Select a significant person from the company’s past. Gain the xp trigger: Following the legacy of “person.”. 2) Select a significant object. Start a long term project to acquire this object, if possible. This may mean rebuilding, stealing, etc. Following crafting rules, treat company tier as 4.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_8_check_1" value="1"/><span></span>
-                  <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_8_check_2" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_8_name" value="Boat"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_8_name" value="Forge Wagon"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_8_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_8_description" data-i18n-placeholder="description">You have a boat, a dock on a waterway, and a small shack to store boating supplies. A second upgrade improves the boat with armor and more cargo capacity.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_8_description" data-i18n-placeholder="description">The Company gains +1d to acquire asset for anything a blacksmith could assist in.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_9_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_9_name" value="Gear"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_9_name" value="Histories"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_9_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_9_description" data-i18n-placeholder="description">+1 quality for Burglary Gear and Climbing Gear.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_9_description" data-i18n-placeholder="description">Add a recent or historical event to the Charter. Gain +1 rep to contracts related to entry.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_10_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_10_name" value="Hidden"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_10_name" value="Wanderers"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_10_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_10_description" data-i18n-placeholder="description">Your lair has a secret location and is disguised to hide it from view. If your lair is discovered, use two downtime activities and pay coin equal to your Tier to relocate it and hide it once again.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_10_description" data-i18n-placeholder="description">The Company gains +1d to scout any rural area.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_11_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_11_name" value="Implements"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_11_name" value="Tenets"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_11_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_11_description" data-i18n-placeholder="description">+1 quality for Arcane Implements.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_11_description" data-i18n-placeholder="description">A codified practice (past or present) that members of the Company are expected to follow. Site this entry at any time for enhance fictional positioning.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_12_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_12_name" value="Quarters"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_12_name" value="Engineers"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_12_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_12_description" data-i18n-placeholder="description">Your lair includes living quarters for the crew. Without this upgrade, each PC sleeps elsewhere, and is vulnerable when they do so.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_12_description" data-i18n-placeholder="description">The Company gains +1d to long term construction projects.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_13_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_13_name" value="Supplies"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_13_name" value="Entertainers"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_13_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_13_description" data-i18n-placeholder="description">+1 quality for Subterfuge Supplies.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_13_description" data-i18n-placeholder="description">In Camp: Remove an additional break while fortified or garrisoned. Away from Camp: All criticals grant 1 Fame.</textarea>
                 </div>
               </div>
               <div class="col50">
                 <div class="item">
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_14_check_1" value="1"/><span></span>
                   <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_14_check_2" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_14_name" value="Secure"/>
+                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_14_name" value="Scribes"/>
                 </div>
                 <div class="item-description">
                   <input class="expand" type="checkbox" name="attr_upgrade_14_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_14_description" data-i18n-placeholder="description">Your lair has locks, alarms, and traps to thwart intruders. A second upgrade improves the defenses to include arcane measures that work against spirits. You might roll your crew's Tier if these measures are ever put to the test, to see how well they thwart an intruder.</textarea>
-                </div>
-              </div>
-              <div class="col50">
-                <div class="item">
-                  <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_15_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_15_name" value="Tools"/>
-                </div>
-                <div class="item-description">
-                  <input class="expand" type="checkbox" name="attr_upgrade_15_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_15_description" data-i18n-placeholder="description">+1 quality for Demolition Tools and Tinkering Tools.</textarea>
-                </div>
-              </div>
-              <div class="col50">
-                <div class="item">
-                  <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_16_check_1" value="1"/><span></span>
-                  <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_16_check_2" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_16_name" value="Vault"/>
-                </div>
-                <div class="item-description">
-                  <input class="expand" type="checkbox" name="attr_upgrade_16_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_16_description" data-i18n-placeholder="description">Your lair has a secure vault, increasing your storage capacity for coin to 8. A second upgrade increases your capacity to 16. A separate part of your vault can be used as a holding cell.</textarea>
-                </div>
-              </div>
-              <div class="col50">
-                <div class="item">
-                  <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_17_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_17_name" value="Weapons"/>
-                </div>
-                <div class="item-description">
-                  <input class="expand" type="checkbox" name="attr_upgrade_17_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_17_description" data-i18n-placeholder="description">+1 quality for Weapons.</textarea>
-                </div>
-              </div>
-              <div class="col50">
-                <div class="item">
-                  <input class="checkbox squarebox" type="checkbox" name="attr_upgrade_18_check_1" value="1"/><span></span>
-                  <input class="itemname" type="text" spellcheck="false" name="attr_upgrade_18_name" value="Workshop"/>
-                </div>
-                <div class="item-description">
-                  <input class="expand" type="checkbox" name="attr_upgrade_18_expand" value="1"/><span></span>
-                  <textarea spellcheck="false" name="attr_upgrade_18_description" data-i18n-placeholder="description">Your lair has a workshop appointed with tools for tinkering and alchemy, as well as a small library of books, documents, and maps. You may accomplish long-term projects with these assets without leaving your lair.</textarea>
+                  <textarea spellcheck="false" name="attr_upgrade_14_description" data-i18n-placeholder="description">The Company Charter is written in ornate calligraphy. The scribes are also quite good with numbers. Claims grant +1 coin for claims exchanged for coin. A second upgrade grants the Company +1 Rep for claims exchanged for Rep.</textarea>
                 </div>
               </div>
             <div class="item col50"></div>
@@ -1852,9 +1804,6 @@
                   <div><span name="attr_type" data-i18n-dynamic="data-i18n-dynamic"></span></div>
                   <div>
                     <input type="radio" name="attr_type" value="gang" checked="checked"/><span data-i18n="gang"></span>
-                  </div>
-                  <div>
-                    <input type="radio" name="attr_type" value="elite"/><span data-i18n="elite"></span>
                   </div>
                   <div>
                     <input type="radio" name="attr_type" value="expert"/><span data-i18n="expert"></span>
@@ -2203,7 +2152,68 @@
 "use strict";
 const data = {
 	"crew": {
-		"assassins": {
+    "company": {
+			"base": {
+				"claim_1_desc": "claim_company_1_description",
+				"claim_1_name": "claim_company_1",
+				"claim_2_desc": "claim_company_2_description",
+				"claim_2_name": "claim_company_2",
+				"claim_3_desc": "claim_company_3_description",
+				"claim_3_name": "claim_company_3",
+				"claim_4_desc": "claim_company_4_description",
+				"claim_4_name": "claim_company_4",
+				"claim_5_desc": "claim_company_5_description",
+				"claim_5_name": "claim_company_5",
+				"claim_6_desc": "claim_company_6_description",
+				"claim_6_name": "claim_company_6",
+        "claim_7_name": "claim_company_7",
+				"claim_7_desc": "claim_company_7_description",        
+        "claim_9_name": "claim_company_9",
+				"claim_9_desc": "claim_company_9_description",            
+        "claim_10_name": "claim_company_10",
+				"claim_10_desc": "claim_company_10_description",  
+        "claim_11_name": "claim_company_11",
+				"claim_11_desc": "claim_company_11_description",  
+        "claim_12_name": "claim_company_12",
+				"claim_12_desc": "claim_company_12_description",  
+        "claim_13_name": "claim_company_13",
+				"claim_13_desc": "claim_company_13_description",  
+        "claim_14_name": "claim_company_14",
+				"claim_14_desc": "claim_company_14_description",  
+        "claim_15_name": "claim_company_15",
+				"claim_15_desc": "claim_company_15_description",  
+				"claim_bridge_2_3": "1",
+				"claim_bridge_3_4": "1",
+				"claim_bridge_6_7": "1",
+				"claim_bridge_9_14": "1",
+				"claim_bridge_12_13": "1",
+				"claim_bridge_13_14": "1",
+				"crew_description": "crew_company_description",
+				"crew_xp_condition": "crew_company_xp_condition",
+				"hunting_grounds_type": "crew_company_hunting_grounds_type",
+				"hunting_grounds_description": "crew_company_hunting_grounds_description",
+				"upgrade_20_check_1": "1",
+				"upgrade_21_check_1": "1"
+			},
+			"crewability": ["comab1", "comab2", "comab3", "comab4", "comab5", "comab6", "comab7", "comab8"],
+			"upgrade": [{
+				"name": "crew_upgrade_hardened",
+				"numboxes": "3"
+			}, {
+				"name": "crew_upgrade_assassin_rigging",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_ironhook_contacts",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_skulks",
+				"numboxes": "1"
+			}, {
+				"name": "crew_upgrade_elite_thugs",
+				"numboxes": "1"
+      }]
+		},      
+      "assassins": {
 			"base": {
 				"claim_1_desc": "claim_training_rooms_description",
 				"claim_1_name": "claim_training_rooms",
